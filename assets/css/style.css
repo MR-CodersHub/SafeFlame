@@ -416,6 +416,8 @@ html.js .wow.in { opacity: 1; transform: none; }
 .testi-track { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 22px; }
 .testi { background: var(--surface); border: 1px solid var(--line); border-radius: var(--radius); padding: 30px; display: flex; flex-direction: column; }
 .testi .stars { color: var(--orange); font-size: 14px; letter-spacing: 3px; margin-bottom: 16px; }
+.about-page .testi .stars { display: flex; gap: 4px; }
+.about-page .testi .stars svg { width: 15px; height: 15px; }
 .testi blockquote { font-size: 15.5px; line-height: 1.75; margin: 0 0 24px; color: var(--ink); flex: 1; }
 .testi-author { display: flex; align-items: center; gap: 12px; border-top: 1px solid var(--line); padding-top: 18px; }
 .testi-author img, .testi-author .avatar { width: 46px; height: 46px; border-radius: 50%; object-fit: cover; flex: none; display: grid; place-items: center; background: var(--navy); color: #fff; font-family: var(--font-head); font-weight: 800; font-size: 14px; }
@@ -584,13 +586,23 @@ td b { color: var(--ink); }
 .timeline-item h3 { font-size: 18px; margin: 0 0 8px; text-align: center; }
 .timeline-item p { font-size: 13.5px; line-height: 1.65; margin: 0; text-align: center; }
 .story-timeline { grid-template-columns: repeat(5, minmax(0, 1fr)); gap: 16px; }
-.story-timeline::before { top: 28px; bottom: auto; left: 10%; right: 10%; width: auto; height: 2px; background: linear-gradient(90deg, var(--fire), var(--orange)); transform: none; }
-.story-timeline .timeline-item { display: block; padding: 82px 16px 24px; background: var(--surface); border-color: var(--line); box-shadow: var(--shadow-sm); }
-.story-timeline .timeline-item::before { top: 21px; width: 16px; height: 16px; background: var(--fire); box-shadow: 0 0 0 5px var(--surface), 0 0 0 7px var(--line); }
-.story-timeline .timeline-item .year { position: absolute; top: 44px; left: 50%; transform: translateX(-50%); margin: 0; background: var(--fire-100); color: var(--fire-600); font-size: 11px; }
+.story-timeline::before { top: 40px; bottom: auto; left: 10%; right: 10%; width: auto; height: 2px; background: linear-gradient(90deg, var(--fire), var(--orange)); transform: none; }
+.story-timeline .timeline-item { display: block; padding: 104px 16px 24px; background: var(--surface); border-color: var(--line); box-shadow: var(--shadow-sm); }
+.story-timeline .timeline-item::before { top: 33px; width: 16px; height: 16px; background: var(--fire); box-shadow: 0 0 0 5px var(--surface), 0 0 0 7px var(--line); }
+.story-timeline .timeline-item .year { position: absolute; top: 64px; left: 50%; transform: translateX(-50%); margin: 0; background: var(--fire-100); color: var(--fire-600); font-size: 11px; }
 .story-timeline .timeline-item h3 { display: flex; align-items: center; justify-content: center; height: 46px; color: var(--ink); font-size: 17px; line-height: 1.35; }
 .story-timeline .timeline-item p { color: var(--muted); font-size: 13px; }
 [data-theme="dark"] .story-timeline .timeline-item .year { background: rgba(198,56,50,.28); color: #FFB4AC; }
+.home2-timeline .timeline-item { background: var(--surface); border-color: var(--line); box-shadow: var(--shadow-sm); }
+.home2-timeline .timeline-item::before { box-shadow: 0 0 0 5px rgba(242,154,56,.16), 0 0 0 10px var(--surface); }
+.home2-timeline .timeline-item .year { background: var(--fire-100); color: var(--fire-600); }
+.home2-timeline .timeline-item h3 { color: var(--ink); }
+.home2-timeline .timeline-item p { color: var(--muted); }
+[data-theme="dark"] .home2-timeline .timeline-item { background: linear-gradient(160deg, var(--navy), var(--navy-800)); border-color: rgba(255,255,255,.28); box-shadow: 0 0 0 1px rgba(242,154,56,.08), 0 18px 40px rgba(4,12,22,.18); }
+[data-theme="dark"] .home2-timeline .timeline-item::before { box-shadow: 0 0 0 5px rgba(242,154,56,.16), 0 0 0 11px var(--navy); }
+[data-theme="dark"] .home2-timeline .timeline-item .year { background: rgba(242,154,56,.14); color: var(--orange); }
+[data-theme="dark"] .home2-timeline .timeline-item h3 { color: #fff; }
+[data-theme="dark"] .home2-timeline .timeline-item p { color: rgba(255,255,255,.72); }
 .about-page .head-inline.center-action { gap: 24px; }
 .about-page .head-inline.center-action .section-head { flex: 1 1 auto; }
 .about-page .head-inline.center-action .btn { flex: none; }
