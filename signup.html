@@ -1,0 +1,91 @@
+﻿<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Create Account | SafeFlame Client Portal</title>
+<meta name="description" content="Create a SafeFlame client portal account to manage fire safety assets, compliance reports and maintenance schedules.">
+<meta name="theme-color" content="#C63832">
+<link rel="icon" type="image/svg+xml" href="assets/favicon.svg">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&family=Sora:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="assets/css/style.css">
+<script>(function(){try{var t=localStorage.getItem('sf-theme')||'light',d=localStorage.getItem('sf-dir')||'ltr';document.documentElement.dataset.theme=t;document.documentElement.dir=d;}catch(e){}})();</script>
+<script defer src="assets/js/main.js"></script>
+</head>
+<body class="auth-page">
+<main class="auth-card signup">
+  <a href="index.html" class="brand auth-brand" aria-label="SafeFlame home">
+    <svg class="brand-mark" viewBox="0 0 48 48" fill="none" aria-hidden="true"><path d="M24 3 43 11v13c0 11.5-7.7 18.5-19 21C12.7 42.5 5 35.5 5 24V11L24 3Z" fill="#1D2E40"/><path d="M24 10c2 6-3 8-3 13a3 3 0 0 0 6 0c0-2 1-3 1-3 3 3 4 6 4 9a8 8 0 1 1-16 0c0-7 8-11 8-19Z" fill="#C63832"/><path d="M24 21c1 3-2 4-2 7a2 2 0 0 0 4 0c0-1 1-2 1-2 2 2 2 4 2 5a5 5 0 0 1-10 0c0-4 5-7 5-10Z" fill="#F29A38"/></svg>
+    <span class="brand-text"><strong>Safe<span>Flame</span></strong><small>CLIENT PORTAL</small></span>
+  </a>
+  <div class="auth-intro">
+    <h1>Create Account</h1>
+    <p>Create an account to get started.</p>
+  </div>
+  <form class="auth-form" data-demo-auth="signup" data-redirect="login.html" novalidate>
+    <div class="field">
+      <label for="su-name">Full Name</label>
+      <input id="su-name" name="name" type="text" autocomplete="name" placeholder="Your full name" data-required>
+      <span class="error-msg"></span>
+    </div>
+    <div class="field">
+      <label for="su-email">Email Address</label>
+      <input id="su-email" name="email" type="email" autocomplete="email" placeholder="you@example.com" data-required>
+      <span class="error-msg"></span>
+    </div>
+    <div class="field">
+      <label for="su-company">Company</label>
+      <input id="su-company" name="company" type="text" autocomplete="organization" placeholder="Organisation name" data-required>
+      <span class="error-msg"></span>
+    </div>
+    <div class="field">
+      <label for="su-phone">Phone Number</label>
+      <input id="su-phone" name="phone" type="tel" autocomplete="tel" placeholder="+1 800 000 0000" data-required data-phone="true">
+      <span class="error-msg"></span>
+    </div>
+    <div class="field">
+      <label for="su-password">Password</label>
+      <div class="auth-input">
+        <input id="su-password" name="password" type="password" autocomplete="new-password" placeholder="At least 6 characters" minlength="6" data-required data-password>
+        <button type="button" class="password-toggle" data-password-toggle="su-password" aria-label="Show password" aria-pressed="false">
+          <svg class="eye-open" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M2 12s3.6-7 10-7 10 7 10 7-3.6 7-10 7-10-7-10-7Z"/><circle cx="12" cy="12" r="3"/></svg>
+          <svg class="eye-off" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 3l18 18M10.6 5.2A10.8 10.8 0 0 1 12 5c6.4 0 10 7 10 7a17 17 0 0 1-3.3 4.1M6.2 6.2A17 17 0 0 0 2 12s3.6 7 10 7a10.7 10.7 0 0 0 4-.7"/><path d="M9.9 9.9a3 3 0 0 0 4.2 4.2"/></svg>
+        </button>
+      </div>
+      <span class="error-msg"></span>
+    </div>
+    <div class="field">
+      <label for="su-confirm">Confirm Password</label>
+      <div class="auth-input">
+        <input id="su-confirm" name="confirm_password" type="password" autocomplete="new-password" placeholder="Repeat your password" data-required data-confirm-password>
+        <button type="button" class="password-toggle" data-password-toggle="su-confirm" aria-label="Show password" aria-pressed="false">
+          <svg class="eye-open" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M2 12s3.6-7 10-7 10 7 10 7-3.6 7-10 7-10-7-10-7Z"/><circle cx="12" cy="12" r="3"/></svg>
+          <svg class="eye-off" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 3l18 18M10.6 5.2A10.8 10.8 0 0 1 12 5c6.4 0 10 7 10 7a17 17 0 0 1-3.3 4.1M6.2 6.2A17 17 0 0 0 2 12s3.6 7 10 7a10.7 10.7 0 0 0 4-.7"/><path d="M9.9 9.9a3 3 0 0 0 4.2 4.2"/></svg>
+        </button>
+      </div>
+      <span class="error-msg"></span>
+    </div>
+    <div class="field">
+      <label class="check-field"><input type="checkbox" data-consent><span>I agree to the <a href="terms.html">Terms &amp; Conditions</a> and <a href="privacy.html">Privacy Policy</a>.</span></label>
+      <span class="error-msg"></span>
+    </div>
+    <button type="submit" class="btn btn-primary auth-submit">Create Account</button>
+  </form>
+  <div class="auth-divider">or sign up with</div>
+  <div class="social-auth">
+    <a href="https://www.google.com" target="_blank" rel="noopener noreferrer" class="social-btn" aria-label="Sign up with Google">
+      <svg viewBox="0 0 24 24" aria-hidden="true"><path fill="#4285F4" d="M22.56 12.25c0-.78-.07-1.53-.2-2.25H12v4.26h5.92a5.06 5.06 0 0 1-2.2 3.32v2.77h3.57c2.08-1.92 3.27-4.74 3.27-8.1Z"/><path fill="#34A853" d="M12 23c2.97 0 5.46-.98 7.28-2.66l-3.57-2.77c-.98.66-2.23 1.06-3.71 1.06-2.86 0-5.29-1.93-6.16-4.53H2.18v2.84A11 11 0 0 0 12 23Z"/><path fill="#FBBC05" d="M5.84 14.1a6.6 6.6 0 0 1 0-4.2V7.06H2.18a11 11 0 0 0 0 9.88l3.66-2.84Z"/><path fill="#EA4335" d="M12 5.38c1.62 0 3.06.56 4.21 1.64l3.15-3.15C17.45 2.09 14.97 1 12 1A11 11 0 0 0 2.18 7.06l3.66 2.84C6.71 7.31 9.14 5.38 12 5.38Z"/></svg> Google
+    </a>
+    <a href="https://www.facebook.com" target="_blank" rel="noopener noreferrer" class="social-btn" aria-label="Sign up with Facebook">
+      <svg viewBox="0 0 24 24" aria-hidden="true"><path fill="#1877F2" d="M22 12.06C22 6.5 17.52 2 12 2S2 6.5 2 12.06c0 5.02 3.66 9.18 8.44 9.94v-7.03H7.9v-2.91h2.54V9.85c0-2.52 1.49-3.91 3.77-3.91 1.09 0 2.24.2 2.24.2v2.46h-1.26c-1.24 0-1.63.78-1.63 1.57v1.88h2.78l-.44 2.91h-2.34V22C18.34 21.24 22 17.08 22 12.06Z"/></svg> Facebook
+    </a>
+    <a href="https://www.apple.com" target="_blank" rel="noopener noreferrer" class="social-btn" aria-label="Sign up with Apple">
+      <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12.152 6.896c-.948 0-2.415-1.078-3.96-1.04-2.04.027-3.91 1.183-4.961 3.014-2.117 3.675-.546 9.103 1.519 12.09 1.013 1.454 2.208 3.09 3.792 3.039 1.52-.065 2.09-.987 3.935-.987 1.831 0 2.35.987 3.96.948 1.637-.026 2.676-1.48 3.676-2.948 1.156-1.688 1.636-3.325 1.662-3.415-.039-.013-3.182-1.221-3.22-4.857-.026-3.04 2.48-4.494 2.597-4.559-1.429-2.09-3.623-2.324-4.39-2.376-2-.156-3.675 1.09-4.61 1.09zM15.53 3.83c.843-1.012 1.4-2.427 1.245-3.83-1.207.052-2.662.805-3.532 1.818-.78.896-1.454 2.338-1.273 3.714 1.338.104 2.715-.688 3.559-1.701"/></svg> Apple
+    </a>
+  </div>
+  <p class="auth-switch">Already have an account? <a href="login.html">Sign In</a></p>
+</main>
+</body>
+</html>
