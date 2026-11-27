@@ -361,6 +361,9 @@ html.js .wow.in { opacity: 1; transform: none; }
 .img-card .img-body p { font-size: 14px; color: var(--muted); margin-bottom: 14px; }
 .tag-pill { position: absolute; inset-inline-start: 16px; top: 16px; background: var(--fire); color: #fff; font-size: 11px; font-weight: 800; padding: 6px 12px; border-radius: 4px; letter-spacing: .06em; text-transform: uppercase; }
 .tag-pill.dark { background: rgba(13,27,41,.86); }
+.knowledge-card .img-body { display: flex; flex-direction: column; align-items: flex-start; }
+.knowledge-card .img-body p { flex: 1; }
+.knowledge-card .btn { margin-top: auto; }
 
 /* ---------- Stats ---------- */
 .stats-band { padding-block: 76px 18px; }
@@ -461,6 +464,9 @@ html.js .wow.in { opacity: 1; transform: none; }
 .field.invalid .error-msg { display: block; }
 .check-field { display: flex; gap: 11px; align-items: flex-start; font-size: 13px; color: var(--muted); cursor: pointer; }
 .check-field input { width: 17px; height: 17px; accent-color: var(--fire); margin-top: 3px; flex: none; }
+.check-field.align-check { align-items: center; line-height: 1.45; }
+.check-field.align-check input { margin: 0; }
+.check-field.align-check span { line-height: 1.45; }
 .form-note { font-size: 12px; color: var(--muted); }
 .radio-cards { display: grid; grid-template-columns: repeat(3, 1fr); gap: 12px; }
 .radio-card { position: relative; border: 1px solid var(--line); border-radius: 10px; padding: 14px; cursor: pointer; display: block; text-align: center; transition: .3s; }
@@ -570,12 +576,13 @@ td b { color: var(--ink); }
 .check-list svg, .check-list-item svg { width: 19px; height: 19px; color: var(--fire); flex: none; margin-top: 3px; }
 .info-panel { background: var(--surface-2); border: 1px solid var(--line); border-radius: var(--radius); padding: 28px; }
 .info-panel h3 { font-size: 19px; margin-bottom: 12px; }
-.timeline { border-inline-start: 2px solid var(--line); padding-inline-start: 30px; display: grid; gap: 32px; }
-.timeline-item { position: relative; }
-.timeline-item::before { content: ''; position: absolute; inset-inline-start: -38px; top: 6px; width: 14px; height: 14px; border-radius: 50%; background: var(--fire); box-shadow: 0 0 0 5px var(--fire-100); }
-.timeline-item .year { font-family: var(--font-head); font-size: 14px; font-weight: 800; color: var(--fire); }
-.timeline-item h3 { font-size: 19px; margin: 6px 0; }
-.timeline-item p { color: var(--muted); font-size: 14.5px; margin: 0; }
+.timeline { position: relative; display: grid; grid-template-columns: 1fr; gap: 18px; text-align: center; }
+.timeline::before { content: ''; position: absolute; z-index: 0; top: 0; bottom: 0; left: 50%; width: 2px; background: linear-gradient(180deg, rgba(198,56,50,.1), rgba(198,56,50,.8) 22%, rgba(242,154,56,.8) 78%, rgba(242,154,56,.1)); transform: translateX(-50%); }
+.timeline-item { position: relative; z-index: 1; display: grid; justify-items: center; padding: 30px 28px 26px; border-radius: 20px; background: linear-gradient(160deg, var(--navy), var(--navy-800)); border: 1px solid rgba(255,255,255,.1); box-shadow: 0 18px 40px rgba(4,12,22,.18); }
+.timeline-item::before { content: ''; position: absolute; left: 50%; top: -8px; width: 16px; height: 16px; border-radius: 50%; background: var(--orange); box-shadow: 0 0 0 5px rgba(242,154,56,.16), 0 0 0 10px var(--navy-800); transform: translateX(-50%); }
+.timeline-item .year { display: inline-flex; align-items: center; justify-content: center; margin-bottom: 10px; padding: 5px 12px; border-radius: 20px; background: rgba(242,154,56,.14); color: var(--orange); font-family: var(--font-head); font-size: 11px; font-weight: 800; letter-spacing: .12em; }
+.timeline-item h3 { font-size: 18px; margin: 0 0 8px; text-align: center; }
+.timeline-item p { font-size: 13.5px; line-height: 1.65; margin: 0; text-align: center; }
 .article-body h2 { font-size: 30px; margin: 38px 0 14px; }
 .article-body h3 { font-size: 21px; margin: 28px 0 10px; }
 .article-body p { color: var(--muted); font-size: 16px; line-height: 1.85; }
@@ -747,6 +754,8 @@ td b { color: var(--ink); }
   .home2-float-card { inset-inline-start: 0; bottom: 18px; min-width: 0; max-width: calc(100% - 16px); padding: 12px; }
   .home2-chip { inset-inline-end: 0; top: 18px; }
   .grid-2, .grid-3, .grid-4 { grid-template-columns: 1fr; }
+  .timeline { grid-template-columns: 1fr; }
+  .timeline-item { padding-inline: 20px; }
   .grid-4.keep-2, .grid-3.keep-2 { grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 14px; }
   .card { padding: 26px; }
   .service-card { padding: 0; }
