@@ -524,7 +524,7 @@ td b { color: var(--ink); }
 
 
 /* ---------- 404 / Maintenance ---------- */
-.error-hero, .maintenance-hero { position: relative; height: var(--page-hero-h); min-height: var(--page-hero-h); display: flex; align-items: center; justify-content: center; text-align: center; background-color: var(--navy-800); background-image: var(--hero-image, url('https://images.pexels.com/photos/7155768/pexels-photo-7155768.jpeg?auto=compress&cs=tinysrgb&w=1920')); background-size: cover; background-position: center; color: #fff; overflow: hidden; }
+.error-hero, .maintenance-hero { position: relative; height: 100vh; height: 100svh; min-height: 520px; display: flex; align-items: center; justify-content: center; text-align: center; background-color: var(--navy-800); background-image: var(--hero-image, url('https://images.pexels.com/photos/7155768/pexels-photo-7155768.jpeg?auto=compress&cs=tinysrgb&w=1920')); background-size: cover; background-position: center; color: #fff; overflow: hidden; }
 .error-hero::before, .maintenance-hero::before { content: ''; position: absolute; inset: 0; background: linear-gradient(90deg, rgba(9,20,32,.94) 0%, rgba(9,20,32,.78) 52%, rgba(9,20,32,.64) 100%), radial-gradient(circle at 78% 16%, rgba(198,56,50,.28), transparent 42%), radial-gradient(circle at 12% 92%, rgba(242,154,56,.16), transparent 44%); }
 .error-hero > .container, .maintenance-hero > .container { position: relative; z-index: 2; width: 100%; }
 .maintenance-hero h1 { font-size: clamp(34px, 4.4vw, 52px); color: #fff; }
@@ -704,7 +704,8 @@ td b { color: var(--ink); }
   .hero-dots { padding-inline: 2px; }
   .hero-dot { width: 20px; }
   .hero-dot.active { width: 36px; }
-  .page-hero, .error-hero, .maintenance-hero { height: auto; min-height: var(--page-hero-h); padding-block: 64px; }
+  .page-hero { height: auto; min-height: var(--page-hero-h); padding-block: 64px; }
+  .error-hero, .maintenance-hero { height: auto; min-height: 100svh; padding-block: 64px; }
   .page-hero h1 { font-size: clamp(30px, 8vw, 44px); }
   .page-hero p { font-size: 15px; }
   .page-hero-actions { margin-top: 22px; }
