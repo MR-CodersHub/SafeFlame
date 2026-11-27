@@ -110,8 +110,16 @@
     const dots = $$('.hero-dot');
     const show = (i) => {
       index = (i + slides.length) % slides.length;
-      slides.forEach((s, n) => s.classList.toggle('active', n === index));
-      dots.forEach((d, n) => d.classList.toggle('active', n === index));
+      slides.forEach((s, n) => {
+        const active = n === index;
+        s.classList.toggle('active', active);
+        s.setAttribute('aria-hidden', String(!active));
+      });
+      dots.forEach((d, n) => {
+        const active = n === index;
+        d.classList.toggle('active', active);
+        d.setAttribute('aria-selected', String(active));
+      });
     };
     const start = () => { timer = setInterval(() => show(index + 1), 6500); };
     const stop = () => clearInterval(timer);

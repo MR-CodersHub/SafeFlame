@@ -77,40 +77,85 @@
     <div class="hero-slide active">
       <img src="https://images.pexels.com/photos/28571448/pexels-photo-28571448.jpeg?auto=compress&cs=tinysrgb&w=1920" alt="Firefighters working on an aerial ladder through dense smoke" fetchpriority="high">
       <div class="hero-overlay"></div>
-    </div>
-    <div class="hero-slide">
-      <img src="https://images.pexels.com/photos/7155768/pexels-photo-7155768.jpeg?auto=compress&cs=tinysrgb&w=1920" alt="Firefighter operating protective equipment inside a fire station" loading="lazy">
-      <div class="hero-overlay"></div>
-    </div>
-    <div class="hero-slide">
-      <img src="https://images.pexels.com/photos/39183052/pexels-photo-39183052.jpeg?auto=compress&cs=tinysrgb&w=1920" alt="Ceiling mounted commercial fire alarm detector" loading="lazy">
-      <div class="hero-overlay"></div>
-    </div>
-    <div class="hero-content">
-      <div class="container">
-        <div class="hero-inner">
-          <span class="hero-tag"><i></i> Certified Fire Protection Partner</span>
-          <h1>Protection that <em>never</em> sleeps.&#8206;</h1>
-          <p>Engineered fire detection, suppression and compliance systems for the spaces you cannot afford to lose. Designed precisely. Maintained relentlessly.</p>
-          <div class="hero-buttons">
-            <a href="contact.html" class="btn btn-primary">Request a Consultation <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14m-6-6 6 6-6 6"/></svg></a>
-            <a href="services.html" class="btn btn-ghost-light">Explore Services</a>
+      <div class="hero-content">
+        <div class="container hero-layout">
+          <div class="hero-copy">
+            <span class="hero-tag"><i></i> Certified Fire Protection Partner</span>
+            <h1>Protection that <em>never</em> sleeps.</h1>
+            <p>Engineered fire detection, suppression and compliance systems for the spaces you cannot afford to lose. Designed precisely. Maintained relentlessly.</p>
+            <div class="hero-buttons">
+              <a href="contact.html" class="btn btn-primary">Request a Consultation <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14m-6-6 6 6-6 6"/></svg></a>
+              <a href="services.html" class="btn btn-ghost-light">Explore Services</a>
+            </div>
           </div>
+          <aside class="hero-panel" aria-label="Response guarantee">
+            <div class="panel-head"><span class="panel-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10Z"/><path d="m9 12 2 2 4-4"/></svg></span><span><small>Always on call</small><strong>Response Guarantee</strong></span></div>
+            <p>Emergency support, every hour of every day.</p>
+            <hr>
+            <div class="mini-row"><span>Average arrival</span><b>38 min</b></div>
+            <div class="mini-row"><span>First-call fix rate</span><b>94%</b></div>
+            <div class="mini-row"><span>Compliance audit</span><b>Free</b></div>
+          </aside>
         </div>
       </div>
     </div>
-    <aside class="hero-side-card" aria-label="Response guarantee">
-      <div class="badge-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10Z"/><path d="m9 12 2 2 4-4"/></svg></div>
-      <strong>Response Guarantee</strong>
-      <p>Emergency support, every hour of every day.</p>
-      <hr>
-      <div class="mini-row"><span>Average arrival</span><b>38 min</b></div>
-      <div class="mini-row"><span>First-call fix rate</span><b>94%</b></div>
-      <div class="mini-row"><span>Compliance audit</span><b>Free</b></div>
-    </aside>
+    <div class="hero-slide" aria-hidden="true">
+      <img src="https://images.pexels.com/photos/7155768/pexels-photo-7155768.jpeg?auto=compress&cs=tinysrgb&w=1920" alt="Firefighter operating protective equipment inside a fire station" loading="lazy">
+      <div class="hero-overlay"></div>
+      <div class="hero-content">
+        <div class="container hero-layout">
+          <div class="hero-copy">
+            <span class="hero-tag"><i></i> Inspection &amp; Compliance</span>
+            <h1>Audit-ready, <em>every</em> single day.</h1>
+            <p>Digital inspection records, clear remedial actions and evidence your insurer actually accepts — without the last-minute paperwork scramble.</p>
+            <div class="hero-buttons">
+              <a href="contact.html" class="btn btn-primary">Book an Audit <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14m-6-6 6 6-6 6"/></svg></a>
+              <a href="pricing.html" class="btn btn-ghost-light">View Pricing</a>
+            </div>
+          </div>
+          <aside class="hero-panel" aria-label="Book a free audit">
+            <div class="panel-head"><span class="panel-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M9 11V6a3 3 0 0 1 6 0v5"/><rect x="5" y="11" width="14" height="10" rx="2"/></svg></span><span><small>30-minute call</small><strong>Book a Free Audit</strong></span></div>
+            <form class="hero-audit-form" data-validate data-success="Audit request received. We will confirm your slot shortly.">
+              <div class="field"><label for="audit-facility">Facility name</label><input id="audit-facility" name="facility" type="text" placeholder="e.g. Northgate Plaza" data-required><span class="error-msg"></span></div>
+              <div class="field"><label for="audit-email">Work email</label><input id="audit-email" name="email" type="email" placeholder="you@company.com" data-required><span class="error-msg"></span></div>
+              <button type="submit" class="btn btn-primary">Request my slot <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14m-6-6 6 6-6 6"/></svg></button>
+              <small>No obligation. We reply within one business day.</small>
+            </form>
+          </aside>
+        </div>
+      </div>
+    </div>
+    <div class="hero-slide" aria-hidden="true">
+      <img src="https://images.pexels.com/photos/39183052/pexels-photo-39183052.jpeg?auto=compress&cs=tinysrgb&w=1920" alt="Ceiling mounted commercial fire alarm detector" loading="lazy">
+      <div class="hero-overlay"></div>
+      <div class="hero-content">
+        <div class="container hero-layout">
+          <div class="hero-copy">
+            <span class="hero-tag"><i></i> Smart Detection Systems</span>
+            <h1>Know before fire <em>spreads.</em></h1>
+            <p>Addressable alarms, suppression monitoring and 24/7 signal handling give your team the minutes that matter when every second counts.</p>
+            <div class="hero-buttons">
+              <a href="products.html" class="btn btn-primary">Explore Products <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14m-6-6 6 6-6 6"/></svg></a>
+              <a href="safety-resources.html" class="btn btn-ghost-light">Read Safety Tips</a>
+            </div>
+          </div>
+          <aside class="hero-panel" aria-label="Live system coverage">
+            <div class="panel-head"><span class="panel-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 3 4 6v6c0 5 3.4 8.4 8 10 4.6-1.6 8-5 8-10V6l-8-3Z"/><path d="m9 12 2 2 4-4"/></svg></span><span><small>Monitored live</small><strong>System Coverage</strong></span></div>
+            <p>Three protection layers, watched around the clock.</p>
+            <div class="coverage-list">
+              <div class="coverage-row"><span class="coverage-label">Detection <b>98%</b></span><span class="coverage-bar"><span style="width:98%"></span></span></div>
+              <div class="coverage-row"><span class="coverage-label">Suppression <b>92%</b></span><span class="coverage-bar"><span style="width:92%"></span></span></div>
+              <div class="coverage-row"><span class="coverage-label">Egress <b>100%</b></span><span class="coverage-bar"><span style="width:100%"></span></span></div>
+            </div>
+            <hr>
+            <div class="mini-row"><span>Signals handled today</span><b>1,284</b></div>
+          </aside>
+        </div>
+      </div>
+    </div>
     <div class="hero-controls">
       <button class="hero-arrow" data-slide-prev aria-label="Previous slide"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M19 12H5m6 6-6-6 6-6"/></svg></button>
-      <div class="hero-dots" role="tablist" aria-label="Slides"><button class="hero-dot active" role="tab" aria-label="Slide 1"></button><button class="hero-dot" role="tab" aria-label="Slide 2"></button><button class="hero-dot" role="tab" aria-label="Slide 3"></button></div>
+      <div class="hero-dots" role="tablist" aria-label="Slides"><button class="hero-dot active" role="tab" aria-label="Slide 1" aria-selected="true"></button><button class="hero-dot" role="tab" aria-label="Slide 2" aria-selected="false"></button><button class="hero-dot" role="tab" aria-label="Slide 3" aria-selected="false"></button></div>
       <button class="hero-arrow" data-slide-next aria-label="Next slide"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14m-6-6 6 6-6 6"/></svg></button>
     </div>
   </section>
