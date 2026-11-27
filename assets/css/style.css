@@ -583,6 +583,55 @@ td b { color: var(--ink); }
 .timeline-item .year { display: inline-flex; align-items: center; justify-content: center; margin-bottom: 10px; padding: 5px 12px; border-radius: 20px; background: rgba(242,154,56,.14); color: var(--orange); font-family: var(--font-head); font-size: 11px; font-weight: 800; letter-spacing: .12em; }
 .timeline-item h3 { font-size: 18px; margin: 0 0 8px; text-align: center; }
 .timeline-item p { font-size: 13.5px; line-height: 1.65; margin: 0; text-align: center; }
+.story-timeline { grid-template-columns: repeat(5, minmax(0, 1fr)); gap: 16px; }
+.story-timeline::before { top: 28px; bottom: auto; left: 10%; right: 10%; width: auto; height: 2px; background: linear-gradient(90deg, var(--fire), var(--orange)); transform: none; }
+.story-timeline .timeline-item { display: block; padding: 82px 16px 24px; background: var(--surface); border-color: var(--line); box-shadow: var(--shadow-sm); }
+.story-timeline .timeline-item::before { top: 21px; width: 16px; height: 16px; background: var(--fire); box-shadow: 0 0 0 5px var(--surface), 0 0 0 7px var(--line); }
+.story-timeline .timeline-item .year { position: absolute; top: 44px; left: 50%; transform: translateX(-50%); margin: 0; background: var(--fire-100); color: var(--fire-600); font-size: 11px; }
+.story-timeline .timeline-item h3 { display: flex; align-items: center; justify-content: center; height: 46px; color: var(--ink); font-size: 17px; line-height: 1.35; }
+.story-timeline .timeline-item p { color: var(--muted); font-size: 13px; }
+[data-theme="dark"] .story-timeline .timeline-item .year { background: rgba(198,56,50,.28); color: #FFB4AC; }
+.about-page .head-inline.center-action { gap: 24px; }
+.about-page .head-inline.center-action .section-head { flex: 1 1 auto; }
+.about-page .head-inline.center-action .btn { flex: none; }
+.team-photo { width: 78px; height: 78px; border-radius: 50%; object-fit: cover; display: block; margin: 0 auto 18px; box-shadow: 0 0 0 4px var(--surface-2); }
+.about-practice { padding-bottom: 0; }
+.about-practice > .container { padding-bottom: 0; }
+.practice-row { padding-block: 56px; background: var(--surface); }
+.practice-row.alt { background: var(--surface-2); }
+.practice-inner { display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 1fr); gap: 56px; align-items: center; }
+.practice-row.alt .practice-media { order: 2; }
+.practice-media { border-radius: 22px; overflow: hidden; aspect-ratio: 4 / 3; background: var(--surface-3); box-shadow: var(--shadow-md); }
+.practice-media img { width: 100%; height: 100%; object-fit: cover; display: block; }
+.practice-index { display: inline-flex; align-items: center; padding: 6px 12px; border-radius: 20px; background: var(--fire-100); color: var(--fire-600); font-family: var(--font-head); font-size: 11px; font-weight: 800; letter-spacing: .12em; text-transform: uppercase; }
+.practice-copy h3 { font-size: clamp(26px, 3.2vw, 38px); line-height: 1.2; margin: 16px 0 12px; }
+.practice-copy p { color: var(--muted); font-size: 16px; line-height: 1.75; margin: 0; }
+.practice-copy .text-link { margin-top: 20px; }
+[data-theme="dark"] .practice-index { background: rgba(198,56,50,.28); color: #FFB4AC; }
+@media (max-width: 1100px) {
+  .story-timeline { display: flex; flex-wrap: wrap; justify-content: center; }
+  .story-timeline::before { display: none; }
+  .story-timeline .timeline-item { flex: 0 1 calc(33.333% - 16px); }
+}
+@media (max-width: 960px) {
+  .about-page .head-inline.center-action { gap: 18px; flex-wrap: nowrap; }
+  .about-page .head-inline.center-action .section-head { max-width: none; min-width: 0; }
+  .about-page .head-inline.center-action .section-head h2 { font-size: clamp(28px, 3.4vw, 42px); }
+  .about-page .head-inline.center-action .btn { padding-inline: 16px; font-size: 13px; }
+  .story-timeline .timeline-item { flex-basis: calc(50% - 16px); }
+  .practice-inner { gap: 34px; }
+}
+@media (max-width: 700px) {
+  .about-page .head-inline.center-action { flex-wrap: wrap; }
+  .about-page .head-inline.center-action .section-head h2 { font-size: clamp(30px, 8vw, 42px); }
+  .about-practice, .about-practice > .container { padding-bottom: 0; }
+  .story-timeline .timeline-item { flex-basis: 100%; }
+  .practice-row { padding-block: 40px; }
+  .practice-inner { grid-template-columns: 1fr; gap: 24px; }
+  .practice-row.alt .practice-media { order: 0; }
+  .practice-copy h3 { font-size: 26px; }
+  .practice-copy p { font-size: 15px; }
+}
 .article-body h2 { font-size: 30px; margin: 38px 0 14px; }
 .article-body h3 { font-size: 21px; margin: 28px 0 10px; }
 .article-body p { color: var(--muted); font-size: 16px; line-height: 1.85; }
