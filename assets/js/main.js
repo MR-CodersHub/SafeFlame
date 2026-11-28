@@ -215,7 +215,8 @@
   /* ---------- Simple tab panels ---------- */
   $$('[data-tabset]').forEach(set => {
     const tabs = $$('[data-tab]', set);
-    const panels = $$('[data-panel]', set);
+    const scope = set.closest('section') || document;
+    const panels = $$('[data-panel]', scope);
     tabs.forEach(tab => tab.addEventListener('click', () => {
       const key = tab.dataset.tab;
       tabs.forEach(t => t.classList.toggle('active', t === tab));
