@@ -512,6 +512,245 @@
     });
   }
 
+  if ($('[data-service-page]')) {
+    const photo = (id, w) => `https://images.pexels.com/photos/${id}/pexels-photo-${id}.jpeg?auto=compress&cs=tinysrgb&w=${w}`;
+    const serviceCatalog = {
+      'fire-detection-alarms': {
+        name: 'Fire Detection', accent: '& Alarms', eyebrow: 'Service detail · 01',
+        summary: 'Addressable and conventional detection, engineered to your floor plan and commissioned with a complete handover file.',
+        hero: 3958649,
+        overviewTitle: 'Detection that', overviewAccent: 'sees the whole picture.',
+        overviewLead: 'We design coverage around how your building actually operates — occupancy, compartmentation and the way people move — not just a drawing.',
+        overviewBody: 'Every device is addressed, tested and documented. Engineers leave you with a clear cause-and-effect matrix and a panel your team can actually read.',
+        badges: [['Design to EN 54', 'hot'], ['Addressable + conventional', 'green'], ['Full handover file', '']],
+        overviewImage: 39183052, overviewAlt: 'Ceiling-mounted fire detector in a commercial building',
+        examine: [
+          ['Coverage design', 'Detector spacing, audibility and device mapping reviewed against the floor plan and occupancy.'],
+          ['Panel & devices', 'Loop integrity, fault history, call points, sounders and interfaces tested device by device.'],
+          ['Integration', 'Suppression, access control, HVAC shutdown and remote monitoring checked as one system.']
+        ],
+        steps: [
+          ['Survey', 'We walk the site with your drawings and mark every constraint before specifying a single device.'],
+          ['Specify', 'A written schedule, coverage drawing and cause-and-effect matrix are agreed up front.'],
+          ['Install', 'Certified technicians fit and wire the system in phases around your operations.'],
+          ['Commission', 'Witnessed testing, engineer training and a bound handover pack close the job.']
+        ],
+        deliverablesTitle: 'What lands on', deliverablesAccent: 'your desk.',
+        deliverablesIntro: 'A complete pack for sign-off, insurance and the next inspection.',
+        deliverables: ['Device schedule and as-fired drawings', 'Cause & Effect matrix and test records', 'Commissioning certificate and warranties', 'Engineer training sign-off sheet'],
+        deliverablesImage: 37907535, deliverablesAlt: 'Detector mounted on a ceiling',
+        faqs: [
+          ['Can you upgrade an existing panel?', 'Often yes. We survey the loop, document reusable devices and set out a phased migration with no blind spots.'],
+          ['Will testing disrupt our building?', 'Tests are scheduled around occupation, with sounders isolated by zone and short notice where needed.'],
+          ['Do you provide drawings?', 'Yes. As-installed drawings and a device schedule are included in the handover pack.'],
+          ['Is remote monitoring available?', 'We can add an approved monitoring link with event forwarding to your chosen alarm receiving centre.']
+        ],
+        cta: { eyebrow: 'Book a survey', title: 'Get a detection design that fits.', text: 'A senior engineer, a drawn coverage plan and a fixed price within 48 hours.', points: ['Drawn coverage', 'Fixed price'], button: 'Book a survey', time: '09:00', day: 'MONDAY · 48H', mark: '09:00' }
+      },
+      'suppression-systems': {
+        name: 'Suppression', accent: 'Systems', eyebrow: 'Service detail · 02',
+        summary: 'Wet, dry, pre-action and clean-agent systems engineered around the assets you cannot afford to lose.',
+        hero: 12045663,
+        overviewTitle: 'Suppression built', overviewAccent: 'around the risk.',
+        overviewLead: 'Water is not always the answer. We match the agent to the hazard, the building and the downtime you can tolerate.',
+        overviewBody: 'From sprinkler hydraulics to clean-agent cylinders, every installation is calculated, witnessed and handed over with maintenance access in mind.',
+        badges: [['Wet · dry · pre-action', 'hot'], ['Clean agent options', 'green'], ['Hydraulic calc pack', '']],
+        overviewImage: 13312223, overviewAlt: 'Industrial valves and pipework with pressure gauges',
+        examine: [
+          ['Hazard mapping', 'Fuel loads, occupancy and critical equipment mapped to decide where suppression is genuinely required.'],
+          ['Hydraulics & supply', 'Flow, pressure and storage calculated against the most demanding design scenario.'],
+          ['Discharge testing', 'Alarms, valves and deluge or pre-action sequences proven with a witnessed acceptance test.']
+        ],
+        steps: [
+          ['Assess', 'We identify the hazard, the asset value and the outage tolerance before choosing an agent.'],
+          ['Calculate', 'Hydraulics, agent quantities and discharge times are modelled and checked independently.'],
+          ['Install', 'Pipework, cylinders and controls are fitted in phased areas with permit-to-work discipline.'],
+          ['Prove', 'A witnessed discharge test and full documentation close the commissioning file.']
+        ],
+        deliverablesTitle: 'What lands on', deliverablesAccent: 'your desk.',
+        deliverablesIntro: 'Calculations, drawings and certificates your insurer and auditors will ask for.',
+        deliverables: ['Hydraulic calculation report', 'As-installed pipework drawings', 'Discharge test certificate', 'Maintenance and inspection schedule'],
+        deliverablesImage: 12045663, deliverablesAlt: 'Detailed view of an industrial fire sprinkler system',
+        faqs: [
+          ['Will sprinklers damage equipment?', 'Only the operating head discharges, and pre-action or clean-agent options are available where water is unacceptable.'],
+          ['Can a system be added to an old building?', 'Yes. We route pipework to suit the structure and phase installation to keep areas live.'],
+          ['How often is servicing needed?', 'Weekly visual checks, annual servicing and periodic hydrostatic tests depending on the system type.'],
+          ['Do you handle refills?', 'We manage cylinder refills, head replacements and test records under a planned agreement.']
+        ],
+        cta: { eyebrow: 'Book a survey', title: 'Get a suppression design that fits.', text: 'A hazard review, system option comparison and a fixed price within 48 hours.', points: ['Hazard review', 'Fixed price'], button: 'Book a survey', time: '10:00', day: 'TUESDAY · 48H', mark: '10:00' }
+      },
+      'inspection-risk-audit': {
+        name: 'Inspection', accent: '& Risk Audit', eyebrow: 'Service detail · 03',
+        summary: 'A rigorous, documented fire safety inspection that turns uncertainty into a clear, costed plan of action.',
+        hero: 5294222,
+        overviewTitle: 'An inspection that', overviewAccent: 'leaves you informed.',
+        overviewLead: 'Too many inspections produce a folder of jargon. Ours produce a conversation: what is working, what is not, what it costs to fix and what can wait.',
+        overviewBody: 'Every assessment is carried out by a senior engineer who will explain findings on site, photograph evidence and rank each item by real-world risk rather than paperwork convenience.',
+        badges: [['Typical: 1 site day', 'hot'], ['Report in 5 days', 'green'], ['All property types', '']],
+        overviewImage: 20614571, overviewAlt: 'Red fire alarm call point inspected on a concrete wall',
+        examine: [
+          ['Active protection', 'Detection coverage, alarm audibility, panel fault history, suppression readiness and extinguisher condition.'],
+          ['Passive protection', 'Fire doors, compartments, penetrations, structural protection and means of escape routes.'],
+          ['Management systems', 'Records, maintenance regimes, staff training, emergency plans and evidence of previous actions.']
+        ],
+        steps: [
+          ['Pre-visit review', 'We study drawings, previous reports and your logs before arriving, so site time is spent inspecting — not reading.'],
+          ['Walkthrough', 'A room-by-room survey with sample tests, photographs and immediate verbal feedback on critical issues.'],
+          ['Analysis', 'Findings mapped against current codes and ranked by likelihood and consequence, with practical remedies.'],
+          ['Report & review', 'A clear written report and a call to walk through it — including an honest view of what does not need doing.']
+        ],
+        deliverablesTitle: 'What lands on', deliverablesAccent: 'your desk.',
+        deliverablesIntro: 'Every assessment produces a package designed to be used — by your facilities team, your insurers and your auditors.',
+        deliverables: ['Prioritised findings register with photographs', 'Code gap analysis and commentary', 'Costed remediation roadmap with phasing', 'Signed inspection certificate'],
+        deliverablesImage: 11142768, deliverablesAlt: 'Industrial pipe system with pressure gauges and valves',
+        faqs: [
+          ['How long does an inspection take?', 'A typical small commercial site takes half a day; larger industrial premises may require two or more days with a small team.'],
+          ['Do we need to close the site?', 'Rarely. We work around occupancy and can attend out of hours. Only sampled testing of sounders ever needs a short notice period.'],
+          ['Will you quote the remedial work?', 'Yes, as a separate fixed-price proposal with clear options — do the minimum, or take the opportunity to upgrade.'],
+          ['Is the report accepted by insurers?', 'Our reports are structured around recognised codes and include signed certification, so they are routinely accepted by insurers and authorities.']
+        ],
+        cta: { eyebrow: 'Book your survey', title: 'Get a clear picture of your risk.', text: 'A senior engineer, a documented findings list and a plan you can actually act on.', points: ['Senior engineer', 'Documented findings'], button: 'Arrange an inspection', time: '09:00', day: 'MONDAY · 48H', mark: '09:00' }
+      },
+      'extinguisher-servicing': {
+        name: 'Extinguisher', accent: 'Servicing', eyebrow: 'Service detail · 04',
+        summary: 'Monthly checks, annual servicing, hydrostatic testing and refills with a live digital asset register.',
+        hero: 19107333,
+        overviewTitle: 'Every extinguisher', overviewAccent: 'accounted for.',
+        overviewLead: 'No more clipboards going missing. Each unit is tagged, tracked and serviced on a schedule your insurer will accept.',
+        overviewBody: 'Technicians record every inspection against the asset, close defects on the day where possible and give you a register that stays current across the whole estate.',
+        badges: [['Annual servicing', 'hot'], ['Hydro testing', 'green'], ['Digital register', '']],
+        overviewImage: 33533879, overviewAlt: 'Red fire extinguisher mounted on a concrete wall',
+        examine: [
+          ['Asset register', 'Every unit tagged with location, type, due date and full service history.'],
+          ['Service & refill', 'Checks, seals, gauges and refills completed to the manufacturer schedule.'],
+          ['Hydrostatic test', 'Cylinders tested at the correct interval with certificates filed against the asset.']
+        ],
+        steps: [
+          ['Register', 'We audit the estate and tag anything missing from the current list.'],
+          ['Schedule', 'Due dates are grouped by site so visits are efficient and predictable.'],
+          ['Service', 'Technicians inspect, refill and replace as needed, recording evidence on site.'],
+          ['Report', 'A compliance summary highlights overdue units and upcoming test dates.']
+        ],
+        deliverablesTitle: 'What lands on', deliverablesAccent: 'your desk.',
+        deliverablesIntro: 'A register that makes the next audit a short conversation.',
+        deliverables: ['Tagged digital asset register', 'Service record per unit', 'Hydro test certificates', 'Annual compliance summary'],
+        deliverablesImage: 15067757, deliverablesAlt: 'Illuminated emergency exit sign above a doorway',
+        faqs: [
+          ['How often do extinguishers need servicing?', 'Annual servicing is standard, with monthly visual checks and hydro tests at the interval printed on the cylinder.'],
+          ['Can you take over our existing units?', 'Yes. We inspect each unit first and only carry forward equipment that is fit and correctly sited.'],
+          ['Do you issue certificates?', 'Every serviced unit gets a record and the site receives a consolidated servicing certificate.'],
+          ['Is the register digital?', 'Yes. You get a live register with due dates, photographs and a complete history per asset.']
+        ],
+        cta: { eyebrow: 'Book a survey', title: 'Get every unit under control.', text: 'An asset audit, a clear servicing schedule and a fixed price within 48 hours.', points: ['Asset audit', 'Fixed price'], button: 'Book a survey', time: '11:00', day: 'WEDNESDAY · 48H', mark: '11:00' }
+      },
+      'emergency-lighting-signage': {
+        name: 'Emergency Lighting', accent: '& Signage', eyebrow: 'Service detail · 05',
+        summary: 'Wayfinding that works in the dark — route lighting, maintained signs and three-hour duration testing.',
+        hero: 15067757,
+        overviewTitle: 'Escape routes', overviewAccent: 'that stay clear.',
+        overviewLead: 'A sign on the wall is not a strategy. We walk the route in darkness conditions and specify lighting and signage people can actually follow.',
+        overviewBody: 'From photoluminescent markings to maintained fittings, every position is justified by the route, the occupancy and the test duration your auditor expects.',
+        badges: [['Route survey', 'hot'], ['3-hour duration', 'green'], ['Maintained + photoluminescent', '']],
+        overviewImage: 1871343, overviewAlt: 'Green emergency exit sign with directional arrow',
+        examine: [
+          ['Route survey', 'Every escape route walked and checked for contrast, obstructions and decision points.'],
+          ['Illumination', 'Lux levels and duration verified against the route geometry and occupancy.'],
+          ['Signage', 'Direction and wording checked so people reach the exit without hesitation.']
+        ],
+        steps: [
+          ['Walk', 'We trace each route in normal and simulated failure conditions.'],
+          ['Specify', 'Fittings, signs and mounting positions are set out on a route drawing.'],
+          ['Install', 'Work is phased to keep corridors clear and occupancies safe.'],
+          ['Test', 'Duration tests are recorded and any failed fitting replaced before handover.']
+        ],
+        deliverablesTitle: 'What lands on', deliverablesAccent: 'your desk.',
+        deliverablesIntro: 'Evidence that the route works when the lights go out.',
+        deliverables: ['Route-by-route survey drawing', 'Lux and duration test records', 'Sign schedule and locations', 'Commissioning certificate'],
+        deliverablesImage: 1871343, deliverablesAlt: 'Green emergency exit sign with directional arrow',
+        faqs: [
+          ['How long must emergency lighting last?', 'Three hours is the common requirement for escape routes, though the exact duty depends on the risk assessment.'],
+          ['Can you test out of hours?', 'Yes. We schedule duration tests around occupancy and issue short notice where a route must be closed.'],
+          ['Do you supply the signs?', 'We supply and install maintained and photoluminescent signs to suit the route and the building finish.'],
+          ['Will this satisfy auditors?', 'The survey, test records and commissioning certificate provide a clear evidence trail for audit and insurance.'],
+        ],
+        cta: { eyebrow: 'Book a survey', title: 'Make every exit obvious.', text: 'A route walk, a written specification and a fixed price within 48 hours.', points: ['Route walk', 'Fixed price'], button: 'Book a survey', time: '12:00', day: 'THURSDAY · 48H', mark: '12:00' }
+      }
+    };
+
+    const slug = new URLSearchParams(location.search).get('s');
+    const service = serviceCatalog[slug] || serviceCatalog['inspection-risk-audit'];
+    const setText = (key, value) => {
+      const el = $(`[data-detail="${key}"]`);
+      if (el) el.textContent = value;
+    };
+    const splitTitle = (key, first, accent, cls) => {
+      const el = $(`[data-detail="${key}"]`);
+      if (!el) return;
+      el.textContent = '';
+      el.append(document.createTextNode(`${first} `));
+      const span = document.createElement('span');
+      span.className = cls;
+      span.textContent = accent;
+      el.append(span);
+    };
+    const setImage = (key, id, alt, w) => {
+      const img = $(`[data-detail="${key}"]`);
+      if (img) { img.src = photo(id, w); img.alt = alt; }
+    };
+
+    document.title = `${service.name} ${service.accent} | SafeFlame`;
+    const desc = $('meta[name="description"]');
+    if (desc) desc.content = service.summary;
+    const hero = $('[data-detail="hero"]');
+    if (hero) hero.style.setProperty('--hero-image', `url('${photo(service.hero, 1600)}')`);
+    setText('eyebrow', service.eyebrow);
+    splitTitle('title', service.name, service.accent, 'accent-orange');
+    setText('summary', service.summary);
+    splitTitle('overview-title', service.overviewTitle, service.overviewAccent, 'accent');
+    setText('overview-lead', service.overviewLead);
+    setText('overview-body', service.overviewBody);
+
+    const badges = $('[data-detail="badges"]');
+    if (badges) {
+      badges.textContent = '';
+      service.badges.forEach(([label, cls]) => {
+        const badge = document.createElement('span');
+        badge.className = cls ? `badge ${cls}` : 'badge';
+        badge.textContent = label;
+        badges.append(badge);
+      });
+    }
+    setImage('overview-image', service.overviewImage, service.overviewAlt, 1000);
+
+    service.examine.forEach(([heading, text], i) => {
+      setText(`examine-${i}-title`, heading);
+      setText(`examine-${i}-text`, text);
+    });
+    service.steps.forEach(([heading, text], i) => {
+      setText(`step-${i}-title`, heading);
+      setText(`step-${i}-text`, text);
+    });
+    splitTitle('deliverables-title', service.deliverablesTitle, service.deliverablesAccent, 'accent-orange');
+    setText('deliverables-intro', service.deliverablesIntro);
+    service.deliverables.forEach((text, i) => setText(`deliverable-${i}`, text));
+    setImage('deliverables-image', service.deliverablesImage, service.deliverablesAlt, 1000);
+    service.faqs.forEach(([q, a], i) => {
+      setText(`faq-${i}-q`, q);
+      setText(`faq-${i}-a`, a);
+    });
+
+    const ctaBand = $('[data-detail="cta-band"]');
+    if (ctaBand) ctaBand.dataset.mark = service.cta.mark;
+    setText('cta-eyebrow', service.cta.eyebrow);
+    setText('cta-title', service.cta.title);
+    setText('cta-text', service.cta.text);
+    setText('cta-point-0', service.cta.points[0]);
+    setText('cta-point-1', service.cta.points[1]);
+    setText('cta-button', service.cta.button);
+    setText('cta-time', service.cta.time);
+    setText('cta-day', service.cta.day);
+  }
+
   /* ---------- Image safety net ---------- */
   $$('img').forEach(img => {
     img.addEventListener('error', () => {

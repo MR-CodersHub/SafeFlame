@@ -517,7 +517,6 @@ html.js .wow.in { opacity: 1; transform: none; }
 .cta-services .cta-side-actions { margin-top: 0; display: flex; flex-direction: column; align-items: stretch; gap: 12px; justify-self: end; width: min(100%, 280px); }
 .cta-services .cta-side-actions .btn { width: 100%; justify-content: center; }
 .cta-service-details { background: #F4F6F8; }
-.cta-service-details::after { content: ''; width: 18px; height: 100%; inset-inline-start: 0; top: 0; background: repeating-linear-gradient(180deg, #C63832 0 22px, #F29A38 22px 44px); }
 .cta-service-details .cta-inner { grid-template-columns: minmax(0, 1.05fr) minmax(260px, .95fr); }
 .cta-art-service-details .calendar { width: min(100%, 260px); padding: 0; border: 0; border-radius: 22px; background: #fff; box-shadow: 0 24px 50px rgba(29,46,64,.14); overflow: hidden; color: #1D2E40; text-align: start; transform: rotate(-3deg); }
 .cta-art-service-details .calendar::before { content: 'SITE VISIT'; display: block; padding: 12px 20px; background: #C63832; color: #fff; font-size: 10px; font-weight: 900; letter-spacing: .16em; }
