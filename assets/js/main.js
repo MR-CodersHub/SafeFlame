@@ -390,6 +390,127 @@
     errSearch.reset();
   });
 
+  if ($('[data-detail-page]')) {
+    const photo = (id, w) => `https://images.pexels.com/photos/${id}/pexels-photo-${id}.jpeg?auto=compress&cs=tinysrgb&w=${w}`;
+    const featureSets = {
+      extinguisher: [
+        ['Certified agent', 'Listed extinguishing media with clear class ratings and batch traceability.'],
+        ['Clear labelling', 'Colour-coded instruction panels make operation obvious under pressure.'],
+        ['Service-ready', 'Compatible with scheduled inspection, refill and hydrostatic test programmes.']
+      ],
+      detection: [
+        ['Fast identification', 'Devices report precise location and type to speed up response.'],
+        ['Drift monitoring', 'Continuous baseline checks flag contamination before false alarms occur.'],
+        ['Audit-ready records', 'Test and event history exports straight into compliance files.']
+      ],
+      suppression: [
+        ['Complete assembly', 'Valve, gauge and test drains supplied as a matched, documented set.'],
+        ['Monitored signals', 'Pressure and flow supervision alerts the panel before a fault becomes silent.'],
+        ['Service access', 'Layout keeps isolation and test points reachable without a system shutdown.']
+      ],
+      egress: [
+        ['Uniform luminance', 'LED optics deliver even illumination with no dark spots or glare.'],
+        ['3-hour duration', 'Maintained operation through the required emergency period.'],
+        ['Flexible mounting', 'Wall and ceiling options suit corridors, stairwells and doorways.']
+      ],
+      panel: [
+        ['Automatic device mapping', 'Devices are discovered and labelled during commissioning, eliminating manual address errors.'],
+        ['Drift compensation', 'Continuous sensor baseline monitoring flags contamination before a false alarm occurs.'],
+        ['Audit-ready logs', 'Every event, test and access action is timestamped and exportable for compliance files.']
+      ]
+    };
+    const catalog = {
+      'guardian-x2': { name: 'Guardian X2', accent: 'Addressable Fire Panel', category: 'panel', summary: 'Two-loop detection control with device-level diagnostics, mapped cause-and-effect logic and secure remote engineer access.', price: '$2,450', image: '3958649', gallery: ['3958649', '39183052', '37907535'], specs: [['Loops', '2 × 159 devices'], ['Display', '7" colour LCD'], ['Protocols', 'Addressable + conventional'], ['Power', '230V AC + battery backup'], ['Enclosure', 'Steel, IP30'], ['Compliance', 'EN 54-2 / EN 54-4']], overviewTitle: 'Control without complexity.', overview: 'Guardian X2 gives facility teams a clear view of every detector, call point and output on the network. Engineers can locate, test and document devices from a single interface.' },
+      'water-jet-9l': { name: 'Water Jet 9L', accent: 'Extinguisher', category: 'extinguisher', summary: 'Class A protection for offices, corridors and general commercial areas.', price: '$89', image: '19107333', gallery: ['19107333', '18329661', '33533879'], specs: [['Capacity', '9 L'], ['Agent', 'Water'], ['Fire class', 'A'], ['Discharge', '≈13 sec'], ['Mounting', 'Wall bracket'], ['Compliance', 'EN 3']], overviewTitle: 'Ready for everyday risks.', overview: 'A straightforward water jet unit for Class A risks in commercial interiors. Simple operation and clear instructions make it a dependable first line of defence.' },
+      'abc-dry-powder-6kg': { name: 'ABC Dry Powder', accent: '6kg Unit', category: 'extinguisher', summary: 'Multi-class coverage for mixed-risk sites, vehicles and workshops.', price: '$74', image: '18329661', gallery: ['18329661', '19107333', '33533879'], specs: [['Capacity', '6 kg'], ['Agent', 'ABC powder'], ['Fire class', 'A / B / C'], ['Working pressure', '12 bar'], ['Mounting', 'Wall bracket'], ['Compliance', 'EN 3']], overviewTitle: 'One unit, three classes.', overview: 'Dry powder covers solid, liquid and electrical risks in a single compact unit. Ideal where the hazard mix changes from one area of a site to the next.' },
+      'glass-extinguisher-case': { name: 'Glass', accent: 'Extinguisher Case', category: 'extinguisher', summary: 'Secure, visible housing with break-seal access for public areas.', price: '$165', image: '15340134', gallery: ['15340134', '19107333', '18329661'], specs: [['Material', 'Toughened glass'], ['Access', 'Break-seal'], ['Capacity', '1–2 units'], ['Mounting', 'Surface fixed'], ['Finish', 'Powder-coated'], ['Compliance', 'EN 3']], overviewTitle: 'Visible, protected, accessible.', overview: 'A glazed cabinet keeps extinguishers protected without hiding them. The break-seal gives immediate access in an emergency while deterring casual removal.' },
+      'foam-9l-industrial': { name: 'Foam 9L', accent: 'Industrial Unit', category: 'extinguisher', summary: 'Flammable liquid protection for plant rooms and workshops.', price: '$138', image: '33533879', gallery: ['33533879', '19107333', '15340134'], specs: [['Capacity', '9 L'], ['Agent', 'AFFF foam'], ['Fire class', 'B'], ['Discharge', '≈15 sec'], ['Mounting', 'Wall or vehicle'], ['Compliance', 'EN 3']], overviewTitle: 'Built for flammable liquids.', overview: 'Film-forming foam smothers flammable liquid fires and helps prevent re-ignition. Suited to plant rooms, workshops and fuel storage areas.' },
+      'photoelectric-smoke-head': { name: 'Photoelectric', accent: 'Smoke Head', category: 'detection', summary: 'Fast response to smouldering fires with drift compensation.', price: '$62', image: '37907535', gallery: ['37907535', '24503710', '3958649'], specs: [['Type', 'Photoelectric'], ['Detection', 'Smouldering fires'], ['Sensitivity', 'Drift compensated'], ['Supply', '24 V DC'], ['Protocol', 'Addressable'], ['Compliance', 'EN 54-7']], overviewTitle: 'Early warning, fewer false alarms.', overview: 'Optical sensing responds quickly to slow, smouldering fires. Automatic drift compensation keeps sensitivity stable as the sensor ages.' },
+      'manual-call-point': { name: 'Manual', accent: 'Call Point', category: 'detection', summary: 'Resettable glass-less break glass unit with clear signage.', price: '$48', image: '20614571', gallery: ['20614571', '3958649', '39183053'], specs: [['Type', 'Resettable'], ['Element', 'Glass-less'], ['Supply', '24 V DC'], ['Indication', 'Integral LED'], ['Protocol', 'Addressable'], ['Compliance', 'EN 54-11']], overviewTitle: 'A clear call to act.', overview: 'A conspicuous call point that anyone can operate in seconds. The resettable element reduces replacement costs after drills or accidental activation.' },
+      'addressable-2-loop-panel': { name: 'Addressable 2-Loop', accent: 'Control Panel', category: 'panel', summary: 'Device-level diagnostics with mapped cause-and-effect logic.', price: '$2,450', image: '3958649', gallery: ['3958649', '39183052', '37907535'], specs: [['Loops', '2 × 159 devices'], ['Display', '7" colour LCD'], ['Protocols', 'Addressable + conventional'], ['Power', '230V AC + battery backup'], ['Enclosure', 'Steel, IP30'], ['Compliance', 'EN 54-2 / EN 54-4']], overviewTitle: 'Control without complexity.', overview: 'Two-loop control with device-level diagnostics and mapped cause-and-effect logic. Engineers can test, locate and document every device from one interface.' },
+      'wireless-detector-kit': { name: 'Wireless', accent: 'Detector Kit', category: 'detection', summary: 'Retrofit detection for listed buildings and live environments.', price: '$320', image: '24503710', gallery: ['24503710', '37907535', '3958649'], specs: [['Devices', 'Up to 32'], ['Protocol', 'Wireless'], ['Battery life', '5 years'], ['Gateway', 'Included'], ['Commissioning', 'App-based'], ['Compliance', 'EN 54-25']], overviewTitle: 'Detection without disruption.', overview: 'A wireless detector kit brings listed buildings and live sites up to standard without chasing new cables through finished spaces.' },
+      'wet-system-valve-set': { name: 'Wet System', accent: 'Valve Set', category: 'suppression', summary: 'Complete alarm valve assembly with gauge and test drains.', price: '$1,890', image: '12045663', gallery: ['12045663', '12171965', '3958649'], specs: [['Type', 'Wet alarm valve'], ['Size', 'DN100'], ['Gauge', 'Dual scale'], ['Drain', 'Test drain included'], ['Material', 'Ductile iron'], ['Approval', 'FM / UL']], overviewTitle: 'The heart of the system.', overview: 'A matched wet alarm valve assembly that controls flow, raises the alarm and provides safe test points for routine verification.' },
+      'sprinkler-monitoring-kit': { name: 'Sprinkler', accent: 'Monitoring Kit', category: 'suppression', summary: 'Pressure, flow and valve supervised signals to the panel.', price: '$570', image: '12171965', gallery: ['12171965', '12045663', '3958649'], specs: [['Inputs', 'Pressure + flow'], ['Signals', 'Valve supervision'], ['Output', 'Volt-free contacts'], ['Supply', '24 V DC'], ['Enclosure', 'IP65'], ['Approval', 'UL listed']], overviewTitle: 'Know the system is ready.', overview: 'Supervision signals tell the panel when pressure drops or a valve moves, so a silent fault never leaves the system unavailable.' },
+      'maintained-exit-sign': { name: 'Maintained', accent: 'Exit Sign', category: 'egress', summary: 'Uniform luminance, long-life LEDs and universal arrow tabs.', price: '$118', image: '1725617', gallery: ['1725617', '15067757', '3958649'], specs: [['Type', 'Maintained'], ['Light source', 'Long-life LED'], ['Duration', '3 hours'], ['Arrows', 'Universal tabs'], ['Mounting', 'Wall or ceiling'], ['Compliance', 'EN 60598-2-22']], overviewTitle: 'Guidance people can follow.', overview: 'Consistent luminance and clear directional tabs keep escape routes legible in normal operation and during an emergency.' },
+      'emergency-bulkhead-light': { name: 'Emergency', accent: 'Bulkhead Light', category: 'egress', summary: 'IP65 corridor and stairwell lighting with 3-hour duration.', price: '$96', image: '15067757', gallery: ['15067757', '1725617', '3958649'], specs: [['Type', 'Emergency LED'], ['Rating', 'IP65'], ['Duration', '3 hours'], ['Output', '240 lm'], ['Mounting', 'Wall or ceiling'], ['Compliance', 'EN 60598-2-22']], overviewTitle: 'Safe passage, even in darkness.', overview: 'A sealed bulkhead luminaire for corridors, stairwells and damp areas, maintaining usable light levels when the supply fails.' },
+      'addressable-call-point': { name: 'Addressable', accent: 'Call Point', category: 'detection', summary: 'Resettable unit with identification at the panel.', price: '$48', image: '20614571', gallery: ['20614571', '3958649', '39183053'], specs: [['Type', 'Addressable'], ['Element', 'Glass-less'], ['Supply', '24 V DC'], ['Indication', 'Integral LED'], ['Protocol', 'Loop device'], ['Compliance', 'EN 54-11']], overviewTitle: 'Identification at the panel.', overview: 'An addressable call point that reports its exact location to the panel, helping responders reach the right part of the building quickly.' },
+      'multi-sensor-head': { name: 'Multi-Sensor', accent: 'Head', category: 'detection', summary: 'Smoke and heat sensing with adaptive algorithms.', price: '$72', image: '39183052', gallery: ['39183052', '37907535', '3958649'], specs: [['Type', 'Multi-sensor'], ['Detection', 'Smoke + heat'], ['Sensitivity', 'Adaptive'], ['Supply', '24 V DC'], ['Protocol', 'Addressable'], ['Compliance', 'EN 54-7']], overviewTitle: 'Two senses, one decision.', overview: 'Combining optical and thermal sensing improves detection across a wider range of fires while reducing nuisance alarms.' },
+      'sounder-beacon': { name: 'Sounder &', accent: 'Beacon', category: 'detection', summary: 'Synchronised visual and audible evacuation warning.', price: '$58', image: '39183053', gallery: ['39183053', '20614571', '3958649'], specs: [['Type', 'Sounder + beacon'], ['Sound output', '100 dB'], ['Flash rate', '1 Hz'], ['Supply', '24 V DC'], ['Protocol', 'Addressable'], ['Compliance', 'EN 54-3 / 23']], overviewTitle: 'Heard and seen, instantly.', overview: 'Synchronised audible and visual warning devices ensure evacuation signals reach everyone, including in noisy or high-ambient-light areas.' }
+    };
+    const slug = new URLSearchParams(location.search).get('p');
+    const product = catalog[slug] || catalog['guardian-x2'];
+    const features = featureSets[product.category] || featureSets.panel;
+    const setText = (key, value) => { const el = $(`[data-detail="${key}"]`); if (el) el.textContent = value; };
+
+    document.title = `${product.name} ${product.accent} | SafeFlame`;
+    const meta = $('meta[name="description"]');
+    if (meta) meta.setAttribute('content', `${product.name} — ${product.summary} Specifications, documents and quotations from SafeFlame.`);
+
+    $('[data-detail="hero"]')?.style.setProperty('--hero-image', `url('${photo(product.image, 1200)}')`);
+    setText('summary', product.summary);
+    setText('price', product.price);
+    setText('overview-title', product.overviewTitle);
+    setText('overview', product.overview);
+    setText('documentation', `Downloadable, version-controlled documents issued with every ${product.name} system.`);
+    setText('datasheet', `${product.name} Technical Datasheet`);
+
+    const titleEl = $('[data-detail="title"]');
+    if (titleEl) {
+      titleEl.textContent = '';
+      titleEl.append(document.createTextNode(product.name + ' '));
+      const accent = document.createElement('span');
+      accent.className = 'accent-orange';
+      accent.textContent = product.accent;
+      titleEl.append(accent);
+    }
+
+    const badges = $('[data-detail="badges"]');
+    if (badges) {
+      badges.textContent = '';
+      (product.badges || [['Certified', 'hot'], ['In stock', 'green'], ['5-year warranty', '']]).forEach(([label, cls]) => {
+        const badge = document.createElement('span');
+        badge.className = cls ? `badge ${cls}` : 'badge';
+        badge.textContent = label;
+        badges.append(badge);
+      });
+    }
+
+    const mainImg = $('[data-detail="main-image"]');
+    const gallery = $('[data-detail="gallery"]');
+    if (mainImg) { mainImg.src = photo(product.image, 1200); mainImg.alt = product.name; }
+    if (gallery) {
+      gallery.textContent = '';
+      product.gallery.forEach((id, i) => {
+        const thumb = document.createElement('img');
+        thumb.src = photo(id, 300);
+        thumb.alt = `${product.name} view ${i + 1}`;
+        if (i === 0) thumb.className = 'active';
+        thumb.addEventListener('click', () => {
+          if (mainImg) mainImg.src = photo(id, 1200);
+          $$('img', gallery).forEach(t => t.classList.toggle('active', t === thumb));
+        });
+        gallery.append(thumb);
+      });
+    }
+
+    const specs = $('[data-detail="specs"]');
+    if (specs) {
+      specs.textContent = '';
+      product.specs.forEach(([label, value]) => {
+        const row = document.createElement('div');
+        const key = document.createElement('span'); key.textContent = label;
+        const val = document.createElement('b'); val.textContent = value;
+        row.append(key, val);
+        specs.append(row);
+      });
+    }
+
+    features.forEach(([heading, text], i) => {
+      setText(`feature-${i}-title`, heading);
+      setText(`feature-${i}-text`, text);
+    });
+  }
+
   /* ---------- Image safety net ---------- */
   $$('img').forEach(img => {
     img.addEventListener('error', () => {
