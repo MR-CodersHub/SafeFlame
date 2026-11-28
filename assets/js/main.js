@@ -82,7 +82,10 @@
 
   /* ---------- Mobile navigation ---------- */
   const mobileNav = $('.mobile-nav');
-  const openNav = () => { mobileNav?.classList.add('open'); mobileNav?.setAttribute('aria-hidden', 'false'); document.body.classList.add('nav-open'); };
+  const profileWrap = $('.profile-wrap');
+  const profileBtn = $('[data-profile-toggle]');
+  const closeProfile = () => { profileWrap?.classList.remove('open'); profileBtn?.setAttribute('aria-expanded', 'false'); };
+  const openNav = () => { closeProfile(); mobileNav?.classList.add('open'); mobileNav?.setAttribute('aria-hidden', 'false'); document.body.classList.add('nav-open'); };
   const closeNav = () => { mobileNav?.classList.remove('open'); mobileNav?.setAttribute('aria-hidden', 'true'); document.body.classList.remove('nav-open'); };
   $$('[data-nav-open]').forEach(b => b.addEventListener('click', openNav));
   $$('[data-nav-close]').forEach(b => b.addEventListener('click', closeNav));
@@ -91,11 +94,9 @@
   $$('.mobile-panel nav a').forEach(a => a.addEventListener('click', closeNav));
 
   /* ---------- Profile menu ---------- */
-  const profileWrap = $('.profile-wrap');
-  const profileBtn = $('[data-profile-toggle]');
-  const closeProfile = () => { profileWrap?.classList.remove('open'); profileBtn?.setAttribute('aria-expanded', 'false'); };
   profileBtn?.addEventListener('click', e => {
     e.stopPropagation();
+    closeNav();
     const open = profileWrap.classList.toggle('open');
     profileBtn.setAttribute('aria-expanded', String(open));
   });
