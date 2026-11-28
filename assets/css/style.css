@@ -365,9 +365,12 @@ html.js .wow.in { opacity: 1; transform: none; }
 .img-card .img-body p { font-size: 14px; color: var(--muted); margin-bottom: 14px; }
 .tag-pill { position: absolute; inset-inline-start: 16px; top: 16px; background: var(--fire); color: #fff; font-size: 11px; font-weight: 800; padding: 6px 12px; border-radius: 4px; letter-spacing: .06em; text-transform: uppercase; }
 .tag-pill.dark { background: rgba(13,27,41,.86); }
-.knowledge-card .img-body { display: flex; flex-direction: column; align-items: flex-start; }
-.knowledge-card .img-body p { flex: 1; }
-.knowledge-card .btn { margin-top: auto; }
+.knowledge-card { display: flex; flex-direction: column; }
+.knowledge-card .img-body { display: flex; flex: 1; flex-direction: column; align-items: flex-start; }
+.knowledge-card .img-body > span:first-child { display: block; margin-bottom: 10px; }
+.knowledge-card .img-body h3 { min-height: 44px; margin-top: 0; }
+.knowledge-card .img-body p { flex: 1; margin-top: 0; }
+.knowledge-card .btn { margin-top: auto; align-self: flex-start; }
 
 /* ---------- Stats ---------- */
 .stats-band { padding-block: 76px 18px; }
@@ -527,11 +530,10 @@ html.js .wow.in { opacity: 1; transform: none; }
 .cta-resources::before { left: 12%; inset-inline-end: auto; }
 .cta-resources::after { content: ''; width: 360px; height: 360px; border: 1px solid rgba(242,154,56,.22); border-radius: 50%; inset-inline-end: -120px; top: -120px; }
 .cta-resources .cta-inner { grid-template-columns: minmax(0, 1.05fr) minmax(260px, .95fr); }
-.cta-art-resources { gap: 10px; width: min(100%, 300px); }
+.cta-art-resources { gap: 10px; width: 100%; max-width: 360px; justify-self: end; }
 .cta-art-resources span { width: 100%; padding: 18px 20px; border: 1px solid rgba(255,255,255,.18); border-radius: 12px; background: rgba(255,255,255,.09); color: #fff; font-size: 12px; font-weight: 900; letter-spacing: .08em; text-align: start; }
 .cta-art-resources span::before { content: '▤'; margin-inline-end: 10px; color: #F29A38; }
-.cta-art-resources span:nth-child(2) { transform: translateX(22px); }
-.cta-art-resources span:nth-child(3) { transform: translateX(44px); }
+.cta-art-resources span:nth-child(2), .cta-art-resources span:nth-child(3) { transform: none; }
 .cta-article { background: #1D2E40; }
 .cta-article::before { left: 6%; inset-inline-end: auto; }
 .cta-article::after { content: ''; inset: 0; background: linear-gradient(115deg, #C63832 0 46%, transparent 46.2%); }
@@ -840,7 +842,9 @@ td b { color: var(--ink); }
 .article-body ul, .article-body ol { display: grid; gap: 10px; margin: 16px 0 24px; padding-inline-start: 20px; list-style: auto; color: var(--muted); }
 .article-body blockquote { border-inline-start: 4px solid var(--fire); background: var(--surface-2); padding: 22px 26px; border-radius: 0 10px 10px 0; margin: 26px 0; font-family: var(--font-head); font-size: 19px; font-weight: 600; color: var(--ink); }
 .article-body img { border-radius: var(--radius); width: 100%; margin-block: 26px; }
+.article-body img[data-detail="article-image"] { display: block; aspect-ratio: 1 / 1; object-fit: cover; }
 .article-body > p:first-of-type::first-letter { font-family: var(--font-head); float: inline-start; font-size: 68px; line-height: .85; padding-inline-end: 10px; color: var(--fire); font-weight: 800; }
+.article-body [hidden] { display: none; }
 .alert-box { border-inline-start: 4px solid var(--orange); background: rgba(242,154,56,.09); padding: 20px 24px; border-radius: 0 10px 10px 0; margin: 24px 0; }
 .alert-box strong { display: block; font-family: var(--font-head); margin-bottom: 5px; }
 .alert-box p { margin: 0; font-size: 14.5px; color: var(--muted); }
@@ -853,6 +857,10 @@ td b { color: var(--ink); }
 .download-card small { color: var(--muted); font-size: 12.5px; }
 .download-card .dl-arrow { margin-inline-start: auto; color: var(--fire); }
 .download-card .dl-arrow svg { width: 19px; }
+button.download-card { width: 100%; font: inherit; color: inherit; text-align: start; cursor: pointer; }
+button.download-card .dl-arrow svg { transition: transform .3s var(--ease); }
+button.download-card:hover .dl-arrow svg { transform: translateX(3px); }
+[dir="rtl"] button.download-card:hover .dl-arrow svg { transform: translateX(-3px) scaleX(-1); }
 
 /* ---------- Footer ---------- */
 .site-footer { background: var(--navy-800); color: #A9B9C8; padding-top: 76px; font-size: 14px; position: relative; z-index: 95; }

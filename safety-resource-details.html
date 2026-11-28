@@ -38,7 +38,6 @@
     <li><a href="about.html">About</a></li>
     <li><a href="products.html">Products</a></li>
     <li><a href="services.html">Services</a></li>
-    <li><a href="safety-resources.html">Resources</a></li>
     <li><a href="pricing.html">Pricing</a></li>
     <li><a href="safety-resources.html">Blog</a></li>
     <li><a href="contact.html">Contact</a></li>
@@ -63,48 +62,57 @@
     <a href="about.html">About <span>03</span></a>
     <a href="products.html">Products <span>04</span></a>
     <a href="services.html">Services <span>05</span></a>
-    <a href="safety-resources.html">Resources <span>06</span></a>
-    <a href="pricing.html">Pricing <span>07</span></a>
-    <a href="safety-resources.html">Blog <span>08</span></a>
-    <a href="contact.html">Contact <span>09</span></a>
+    <a href="pricing.html">Pricing <span>06</span></a>
+    <a href="safety-resources.html">Blog <span>07</span></a>
+    <a href="contact.html">Contact <span>08</span></a>
   </nav>
   <div class="mobile-account"><a href="login.html" class="btn btn-outline btn-sm">Login</a><a href="signup.html" class="btn btn-primary btn-sm">Signup</a></div>
   <a href="contact.html" class="btn btn-primary btn-block">Get a Quote</a>
 </div></div>
-<main>
-<section class="page-hero" style="--hero-image:url('https://images.pexels.com/photos/36731054/pexels-photo-36731054.jpeg?auto=compress&cs=tinysrgb&w=1200')">
+<main data-resource-page>
+<section class="page-hero" data-detail="hero" style="--hero-image:url('https://images.pexels.com/photos/36731054/pexels-photo-36731054.jpeg?auto=compress&cs=tinysrgb&w=1200')">
   <div class="container">
-    <div style="display:flex;gap:10px;flex-wrap:wrap"><span class="badge hot">Featured guide</span><span class="badge">8 min read</span><span class="badge green">Updated 2026</span></div>
-    <h1>Emergency planning for <span class="accent-orange">real buildings.</span></h1>
-    <p>Why the best fire plan is the one your people can remember at 2am — and how to build one that survives contact with reality.</p>
+    <div style="display:flex;gap:10px;flex-wrap:wrap" data-detail="badges"><span class="badge hot">Featured guide</span><span class="badge">8 min read</span><span class="badge green">Updated 2026</span></div>
+    <h1 data-detail="title">Emergency planning for <span class="accent-orange">real buildings.</span></h1>
+    <p data-detail="summary">Why the best fire plan is the one your people can remember at 2am — and how to build one that survives contact with reality.</p>
   </div>
 </section>
 
 <section class="section">
   <div class="container grid-2" style="grid-template-columns:minmax(0,1fr) 300px;align-items:start">
     <article class="article-body wow">
-      <img src="https://images.pexels.com/photos/36731054/pexels-photo-36731054.jpeg?auto=compress&cs=tinysrgb&w=1200" alt="Illuminated emergency exit sign and alarm in an indoor corridor">
-      <p>Most emergency plans fail for a mundane reason: they were written for a building as designed, not the building as used. Doors get propped open, storage migrates into escape routes and staff rotate faster than the plan is updated. A good plan accounts for all of it.</p>
-      <p>This guide sets out the approach our engineers use when helping clients build plans that work in practice — short enough to remember, specific enough to act on and robust enough to change as the building changes.</p>
-      <h2 id="section-1">Start with how people actually move</h2>
-      <p>Before drawing anything, walk the building at the busiest time and again at its quietest. Note where people genuinely go, which exits they favour and where they hesitate. The routes people already use are usually the safest ones to formalise — you are reinforcing instinct rather than fighting it.</p>
-      <blockquote>"A plan that depends on people reading a notice in an emergency is not a plan. It is a hope."</blockquote>
-      <h2 id="section-2">Make instructions impossible to misread</h2>
-      <p>Use short, imperative sentences. Place them where the decision happens: beside the call point, at the exit, near the assembly point. Avoid floor-plan diagrams with tiny type that nobody can read in low light. A single line — "Go left to the stairwell, do not use the lift" — outperforms a page of procedure.</p>
-      <ul><li>Identify two routes from every occupied area wherever possible.</li><li>Name a responsible person for each floor, with a named deputy.</li><li>Show the assembly point physically, not just in the handbook.</li><li>State clearly who calls the fire service and what information to give.</li></ul>
-      <h2 id="section-3">Design for the first sixty seconds</h2>
-      <p>The first minute determines the outcome more than any later action. Train for it specifically. People should know the location of the nearest call point without thinking, understand that they should not investigate a fire themselves, and know that closing a door behind them can protect an entire corridor.</p>
-      <div class="alert-box"><strong>Practical note</strong><p>Only attempt to tackle a fire if you have been trained, the fire is small, you have a clear escape route behind you and the correct extinguisher is to hand. In every other case, get out and raise the alarm.</p></div>
-      <h2 id="section-4">Practise, then change the plan</h2>
-      <p>A drill is not a box-ticking exercise. It is the only reliable way to discover that the designated assembly point floods at high tide, or that a marshal's desk is on the opposite side of a secured door. Time the drill, record what surprised you and issue a one-page change note afterwards.</p>
-      <h3>A useful drill sequence</h3>
-      <ol><li>Announce a drill without warning the marshals.</li><li>Time the full evacuation from alarm to assembly.</li><li>Ask three people to explain what they did and why.</li><li>Record every point of confusion, however small.</li><li>Update the plan within seven days and tell everyone what changed.</li></ol>
-      <h2 id="section-5">Keep the evidence</h2>
-      <p>Insurers and authorities will want to see that the plan is live. Keep dated versions, drill records, training attendance and any remedial actions in one place. Our compliance portal does this automatically, but a simple folder works just as well if it is maintained consistently.</p>
+      <img data-detail="article-image" src="https://images.pexels.com/photos/36731054/pexels-photo-36731054.jpeg?auto=compress&cs=tinysrgb&w=1200" alt="Emergency exit sign and alarm in an indoor corridor">
+      <p data-detail="intro-0">Most emergency plans fail for a mundane reason: they were written for a building as designed, not the building as used. Doors get propped open, storage migrates into escape routes and staff rotate faster than the plan is updated.</p>
+      <p data-detail="intro-1">This guide sets out the approach our engineers use when helping clients build plans that work in practice — short enough to remember, specific enough to act on and robust enough to change as the building changes.</p>
+      <h2 id="section-0" data-detail="section-0-heading">Start with how people actually move</h2>
+      <p data-detail="section-0-body">Before drawing anything, walk the building at its busiest and quietest times. Note where people genuinely go, which exits they favour and where they hesitate, then formalise the routes people already trust.</p>
+      <blockquote data-detail="section-0-quote">"A plan that depends on people reading a notice in an emergency is not a plan. It is a hope."</blockquote>
+      <ul data-detail="section-0-list" hidden></ul>
+      <div class="alert-box" data-detail="section-0-note" hidden><strong data-detail="section-0-note-title"></strong><p data-detail="section-0-note-body"></p></div>
+      <h2 id="section-1" data-detail="section-1-heading">Make instructions impossible to misread</h2>
+      <p data-detail="section-1-body">Use short, imperative sentences and place them where the decision happens: beside the call point, at the exit and near the assembly point.</p>
+      <ul data-detail="section-1-list"><li>Identify two routes from every occupied area</li><li>Name a responsible person and deputy per floor</li><li>Show the assembly point physically</li><li>State who calls the fire service and what to say</li></ul>
+      <blockquote data-detail="section-1-quote" hidden></blockquote>
+      <div class="alert-box" data-detail="section-1-note" hidden><strong data-detail="section-1-note-title"></strong><p data-detail="section-1-note-body"></p></div>
+      <h2 id="section-2" data-detail="section-2-heading">Design for the first sixty seconds</h2>
+      <p data-detail="section-2-body">Train for the first minute specifically. People should know the nearest call point without thinking, understand not to investigate a fire, and know that closing a door protects the corridor behind them.</p>
+      <ul data-detail="section-2-list" hidden></ul>
+      <blockquote data-detail="section-2-quote" hidden></blockquote>
+      <div class="alert-box" data-detail="section-2-note"><strong data-detail="section-2-note-title">Practical note</strong><p data-detail="section-2-note-body">Only tackle a fire if trained, the fire is small, escape is clear behind you and the correct extinguisher is to hand. In every other case, get out and raise the alarm.</p></div>
+      <h2 id="section-3" data-detail="section-3-heading">Practise, then change the plan</h2>
+      <p data-detail="section-3-body">A drill is the only reliable way to discover that the assembly point floods or a marshal is stationed behind a secured door. Time it, record surprises and issue a one-page change note.</p>
+      <ul data-detail="section-3-list"><li>Announce a drill without warning the marshals</li><li>Time the full evacuation to assembly</li><li>Ask three people to explain what they did</li><li>Update the plan within seven days</li></ul>
+      <blockquote data-detail="section-3-quote" hidden></blockquote>
+      <div class="alert-box" data-detail="section-3-note" hidden><strong data-detail="section-3-note-title"></strong><p data-detail="section-3-note-body"></p></div>
+      <h2 id="section-4" data-detail="section-4-heading">Keep the evidence</h2>
+      <p data-detail="section-4-body">Insurers and authorities want to see that the plan is live. Keep dated versions, drill records, training attendance and remedial actions together in one maintained place.</p>
+      <ul data-detail="section-4-list" hidden></ul>
+      <blockquote data-detail="section-4-quote" hidden></blockquote>
+      <div class="alert-box" data-detail="section-4-note" hidden><strong data-detail="section-4-note-title"></strong><p data-detail="section-4-note-body"></p></div>
     </article>
     <aside class="wow" data-delay="1" style="position:sticky;top:100px;display:grid;gap:18px">
-      <div class="info-panel"><h3>On this page</h3><div class="footer-links" style="gap:9px"><a href="#section-1">01 · How people move</a><a href="#section-2">02 · Clear instructions</a><a href="#section-3">03 · First sixty seconds</a><a href="#section-4">04 · Practise and adapt</a><a href="#section-5">05 · Keep the evidence</a></div></div>
-      <div class="info-panel" style="border-color:var(--fire)"><h3>Key takeaways</h3><ul class="check-list"><li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="m5 12 5 5L20 7"/></svg><span>Write for people under stress, not for a filing cabinet.</span></li><li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="m5 12 5 5L20 7"/></svg><span>Place instructions where decisions happen.</span></li><li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="m5 12 5 5L20 7"/></svg><span>Drills are for discovering problems, not proving perfection.</span></li></ul></div>
+      <div class="info-panel"><h3>On this page</h3><div class="footer-links" style="gap:9px"><a href="#section-0" data-detail="section-0-nav">01 · How people move</a><a href="#section-1" data-detail="section-1-nav">02 · Clear instructions</a><a href="#section-2" data-detail="section-2-nav">03 · First sixty seconds</a><a href="#section-3" data-detail="section-3-nav">04 · Practise and adapt</a><a href="#section-4" data-detail="section-4-nav">05 · Keep the evidence</a></div></div>
+      <div class="info-panel" style="border-color:var(--fire)"><h3>Key takeaways</h3><ul class="check-list"><li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="m5 12 5 5L20 7"/></svg><span data-detail="takeaway-0">Write for people under stress, not for a filing cabinet.</span></li><li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="m5 12 5 5L20 7"/></svg><span data-detail="takeaway-1">Place instructions where decisions happen.</span></li><li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="m5 12 5 5L20 7"/></svg><span data-detail="takeaway-2">Drills are for discovering problems, not proving perfection.</span></li></ul></div>
       <div class="cta-band" style="padding:24px;border-radius:14px"><h3 style="color:#fff;font-size:18px">Want a second opinion?</h3><p style="color:rgba(255,255,255,.7);font-size:13px;margin:8px 0 16px">We review emergency plans at no charge for existing clients.</p><a href="contact.html" class="btn btn-light btn-sm">Ask an engineer</a></div>
     </aside>
   </div>
@@ -113,24 +121,24 @@
 <section class="section section-tint"><div class="container">
   <div class="head-inline wow"><div class="section-head"><span class="eyebrow">Take it with you</span><h2>Download the <span class="accent">companion checklist.</span></h2></div><a href="safety-resources.html" class="btn btn-outline">All resources <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14m-6-6 6 6-6 6"/></svg></a></div>
   <div class="grid-2" style="margin-top:34px;max-width:900px">
-    <div class="download-card wow"><span class="dl-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 3v12m-5-5 5 5 5-5M4 19h16"/></svg></span><span><strong>Emergency plan self-review</strong><small>PDF · 1.1 MB · 2 pages</small></span><span class="dl-arrow"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 3v12m-5-5 5 5 5-5M4 19h16"/></svg></span></div>
-    <div class="download-card wow" data-delay="1"><span class="dl-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 3v12m-5-5 5 5 5-5M4 19h16"/></svg></span><span><strong>Fire drill record template</strong><small>PDF · 640 KB · Editable</small></span><span class="dl-arrow"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 3v12m-5-5 5 5 5-5M4 19h16"/></svg></span></div>
+    <button type="button" class="download-card wow" data-detail="download-0" data-download="daily-escape-route"><span class="dl-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 3v12m-5-5 5 5 5-5M4 19h16"/></svg></span><span><strong data-detail="download-0-title">Emergency plan self-review</strong><small data-detail="download-0-sub">PDF · 1.1 MB · 2 pages</small></span><span class="dl-arrow"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 3v12m-5-5 5 5 5-5M4 19h16"/></svg></span></button>
+    <button type="button" class="download-card wow" data-detail="download-1" data-download="fire-drill-record" data-delay="1"><span class="dl-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 3v12m-5-5 5 5 5-5M4 19h16"/></svg></span><span><strong data-detail="download-1-title">Fire drill record template</strong><small data-detail="download-1-sub">PDF · 640 KB · Editable</small></span><span class="dl-arrow"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 3v12m-5-5 5 5 5-5M4 19h16"/></svg></span></button>
   </div>
 </div></section>
 
 <section class="section"><div class="container"><div class="section-head center wow"><span class="eyebrow center">Related reading</span><h2>Keep building your <span class="accent">knowledge base.</span></h2></div><div class="grid-3">
-  <a class="img-card wow" href="safety-resource-details.html"><div class="img-wrap"><img src="https://images.pexels.com/photos/15513841/pexels-photo-15513841.jpeg?auto=compress&cs=tinysrgb&w=900" alt="Emergency exit door in an industrial building" loading="lazy"><span class="tag-pill dark">Guide</span></div><div class="img-body"><h3>Exit routes that work under pressure</h3><p>Signage, lighting and the human factors behind successful evacuation.</p></div></a>
-  <a class="img-card wow" data-delay="1" href="safety-resource-details.html"><div class="img-wrap"><img src="https://images.pexels.com/photos/5294222/pexels-photo-5294222.jpeg?auto=compress&cs=tinysrgb&w=900" alt="Exit sign lighting a building staircase" loading="lazy"><span class="tag-pill dark">Checklist</span></div><div class="img-body"><h3>Stairwell safety: the monthly check</h3><p>Seven points that keep your primary escape route dependable.</p></div></a>
-  <a class="img-card wow" data-delay="2" href="safety-resource-details.html"><div class="img-wrap"><img src="https://images.pexels.com/photos/1871343/pexels-photo-1871343.jpeg?auto=compress&cs=tinysrgb&w=900" alt="Illuminated green emergency exit sign with arrow" loading="lazy"><span class="tag-pill dark">Explainer</span></div><div class="img-body"><h3>Photoluminescent vs maintained signage</h3><p>How to choose the right system for each part of your building.</p></div></a>
+  <a class="img-card wow" data-detail="related-0-link" href="safety-resource-details.html?r=exit-routes-under-pressure"><div class="img-wrap"><img data-detail="related-0-image" src="https://images.pexels.com/photos/15513841/pexels-photo-15513841.jpeg?auto=compress&cs=tinysrgb&w=900" alt="Emergency exit door in an industrial building" loading="lazy"><span class="tag-pill dark" data-detail="related-0-tag">Guide</span></div><div class="img-body"><h3 data-detail="related-0-title">Exit routes that work under pressure</h3><p data-detail="related-0-text">Signage, lighting and the human factors behind successful evacuation.</p></div></a>
+  <a class="img-card wow" data-detail="related-1-link" data-delay="1" href="safety-resource-details.html?r=stairwell-monthly-check"><div class="img-wrap"><img data-detail="related-1-image" src="https://images.pexels.com/photos/5294222/pexels-photo-5294222.jpeg?auto=compress&cs=tinysrgb&w=900" alt="Exit sign lighting a building staircase" loading="lazy"><span class="tag-pill dark" data-detail="related-1-tag">Checklist</span></div><div class="img-body"><h3 data-detail="related-1-title">Stairwell safety: the monthly check</h3><p data-detail="related-1-text">Seven points that keep your primary escape route dependable.</p></div></a>
+  <a class="img-card wow" data-detail="related-2-link" data-delay="2" href="safety-resource-details.html?r=photoluminescent-vs-maintained"><div class="img-wrap"><img data-detail="related-2-image" src="https://images.pexels.com/photos/1871343/pexels-photo-1871343.jpeg?auto=compress&cs=tinysrgb&w=900" alt="Illuminated green emergency exit sign with arrow" loading="lazy"><span class="tag-pill dark" data-detail="related-2-tag">Explainer</span></div><div class="img-body"><h3 data-detail="related-2-title">Photoluminescent vs maintained signage</h3><p data-detail="related-2-text">How to choose the right system for each part of your building.</p></div></a>
 </div></div></section>
 
 <section class="section section-tint"><div class="container grid-2"><div class="wow"><span class="eyebrow">Article FAQ</span><h2 style="font-size:clamp(28px,3.2vw,40px)">A few more <span class="accent">details.</span></h2></div><div class="faq-list wow" data-delay="1">
-  <div class="faq-item"><button class="faq-q" aria-expanded="false">How often should we run a drill?<span class="plus">+</span></button><div class="faq-a"><p>Most jurisdictions expect at least annual drills; higher-risk or larger sites benefit from twice yearly. Short, unannounced walk-throughs are useful between full drills.</p></div></div>
-  <div class="faq-item"><button class="faq-q" aria-expanded="false">Who should be a fire marshal?<span class="plus">+</span></button><div class="faq-a"><p>Choose people who are present on site, confident speaking to others and willing to take responsibility. Always appoint a deputy for each area.</p></div></div>
-  <div class="faq-item"><button class="faq-q" aria-expanded="false">Can you review our existing plan?<span class="plus">+</span></button><div class="faq-a"><p>Yes. Send it to us and an engineer will mark it up with practical comments, usually within two working days.</p></div></div>
+  <div class="faq-item"><button class="faq-q" aria-expanded="false"><span data-detail="faq-0-q">How often should we run a drill?</span><span class="plus">+</span></button><div class="faq-a"><p data-detail="faq-0-a">Most jurisdictions expect at least annual drills; higher-risk or larger sites benefit from twice yearly. Short, unannounced walk-throughs are useful between full drills.</p></div></div>
+  <div class="faq-item"><button class="faq-q" aria-expanded="false"><span data-detail="faq-1-q">Who should be a fire marshal?</span><span class="plus">+</span></button><div class="faq-a"><p data-detail="faq-1-a">Choose people who are present on site, confident speaking to others and willing to take responsibility. Always appoint a deputy for each area.</p></div></div>
+  <div class="faq-item"><button class="faq-q" aria-expanded="false"><span data-detail="faq-2-q">Can you review our existing plan?</span><span class="plus">+</span></button><div class="faq-a"><p data-detail="faq-2-a">Yes. Send it to us and an engineer will mark it up with practical comments, usually within two working days.</p></div></div>
 </div></div></section>
 
-<section class="cta-band cta-article" data-mark="DRILL"><div class="container cta-inner"><div class="cta-copy wow"><span class="eyebrow light">Put it into practice</span><h2>Want us to run a drill with your team?</h2><p>We design, observe and debrief practical evacuation exercises tailored to your building.</p><div class="cta-points"><span>Drill design</span><span>Debrief included</span></div><div class="cta-actions wow" data-delay="1"><a href="contact.html" class="btn btn-light">Arrange a drill <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14m-6-6 6 6-6 6"/></svg></a><a href="services.html" class="btn btn-ghost-light">Our services</a></div></div><div class="cta-art cta-art-article wow" data-delay="2" aria-hidden="true"><span>&rarr;</span><span>&rarr;</span><span>&rarr;</span><span>DRILL DEBRIEF</span></div></div></section>
+<section class="cta-band cta-article" data-detail="cta-band" data-mark="DRILL"><div class="container cta-inner"><div class="cta-copy wow"><span class="eyebrow light" data-detail="cta-eyebrow">Put it into practice</span><h2 data-detail="cta-title">Want us to run a drill with your team?</h2><p data-detail="cta-text">We design, observe and debrief practical evacuation exercises tailored to your building.</p><div class="cta-points"><span data-detail="cta-point-0">Drill design</span><span data-detail="cta-point-1">Debrief included</span></div><div class="cta-actions wow" data-delay="1"><a href="contact.html" class="btn btn-light"><span data-detail="cta-button">Arrange a drill</span> <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14m-6-6 6 6-6 6"/></svg></a><a href="services.html" class="btn btn-ghost-light">Our services</a></div></div><div class="cta-art cta-art-article wow" data-delay="2" aria-hidden="true"><span>&rarr;</span><span>&rarr;</span><span>&rarr;</span><span data-detail="cta-art">DRILL DEBRIEF</span></div></div></section>
 
 </main>
 
