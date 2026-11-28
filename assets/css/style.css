@@ -120,6 +120,10 @@ html.js .wow.in { opacity: 1; transform: none; }
 .head-inline { display: flex; justify-content: space-between; align-items: flex-end; gap: 30px; flex-wrap: wrap; }
 .head-inline .section-head { margin-bottom: 0; }
 .head-inline.center-action { align-items: center; }
+.plans-header { text-align: center; margin-bottom: 18px; }
+.plans-header h2 { font-size: clamp(32px, 4.1vw, 52px); }
+.plans-meta { display: flex; align-items: center; justify-content: space-between; gap: 30px; flex-wrap: wrap; margin-bottom: 50px; }
+.plans-sub { color: var(--muted); font-size: 17px; margin: 0; }
 .accent { color: var(--fire); }
 .accent-orange { color: var(--orange); }
 .lead { font-size: 19px; color: var(--muted); }
@@ -727,7 +731,7 @@ td b { color: var(--ink); }
 .switch.on { background: var(--fire); }
 .switch.on::after { inset-inline-start: 28px; }
 .save-pill { background: rgba(47,163,107,.12); color: #2FA36B; font-size: 11px; padding: 4px 9px; border-radius: 20px; }
-.price-card { border: 1px solid var(--line); border-radius: var(--radius-lg); padding: 34px; background: var(--surface); position: relative; transition: .4s var(--ease); }
+.price-card { display: flex; flex-direction: column; border: 1px solid var(--line); border-radius: var(--radius-lg); padding: 34px; background: var(--surface); position: relative; transition: .4s var(--ease); }
 .price-card.featured { border-color: var(--fire); box-shadow: var(--shadow-lg); transform: translateY(-10px); }
 .price-card:hover { transform: translateY(-6px); box-shadow: var(--shadow-md); }
 .price-card.featured:hover { transform: translateY(-13px); }
@@ -738,7 +742,11 @@ td b { color: var(--ink); }
 .price-amount { font-family: var(--font-head); font-size: 44px; font-weight: 800; letter-spacing: -.05em; color: var(--navy); line-height: 1; }
 [data-theme="dark"] .price-amount { color: #fff; }
 .price-amount small { font-family: var(--font-body); font-size: 14px; font-weight: 600; color: var(--muted); letter-spacing: 0; }
-.price-card ul { display: grid; gap: 12px; margin: 24px 0 28px; }
+.price-card ul { display: grid; flex: 1; gap: 12px; margin: 24px 0 28px; }
+.price-card > p:last-child { margin-top: auto; }
+.price-card:hover > p:last-child { transform: translateY(6px); }
+.price-card.featured > p:last-child { transform: translateY(10px); }
+.price-card.featured:hover > p:last-child { transform: translateY(13px); }
 .price-card li { display: flex; gap: 10px; align-items: flex-start; font-size: 14px; color: var(--muted); }
 .price-card li svg { width: 18px; flex: none; color: #2FA36B; margin-top: 3px; }
 
